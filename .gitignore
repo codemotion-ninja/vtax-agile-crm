@@ -1,0 +1,8 @@
+log/*
+pids/*
+.idea/
+.DS_Stroe/
+npm-debug.log
+package-lock.json
+
+
