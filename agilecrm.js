@@ -179,11 +179,9 @@ ContactAPI.prototype.add = function add(contact, success, failure) {
         try {
           console.log('Status Code = ' + resp.statusCode);
           let contacts = '';
-          var statusCode = resp.statusCode;
+          const statusCode = resp.statusCode;
           if (statusCode != 200) {
             console.log('Error message = ' + body);
-            contacts = JSON.parse(body);
-          } else {
             contacts =
               typeof body === 'object'
                 ? JSON.parse(body)
@@ -191,6 +189,8 @@ ContactAPI.prototype.add = function add(contact, success, failure) {
                     error: body,
                     statusCode: statusCode,
                   };
+          } else {
+            contacts = JSON.parse(body);
           }
           success(contacts);
         } catch (ex) {
