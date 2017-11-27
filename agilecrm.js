@@ -81,7 +81,7 @@ ContactAPI.prototype.getListContacts = function getListContacts(success, failure
 
 ContactAPI.prototype.getContactById = function getContactById(contactId,
                                                               success,
-                                                              failure,) {
+                                                              failure) {
   var options = this.getOptions();
   options.path = '/dev/api/contacts/' + contactId;
 
@@ -121,7 +121,7 @@ ContactAPI.prototype.getContactById = function getContactById(contactId,
 
 ContactAPI.prototype.getContactByEmail = function getContactByEmail(email,
                                                                     success,
-                                                                    failure,) {
+                                                                    failure) {
   var options = this.getOptions();
   options.path = '/dev/api/contacts/search/email/' + email;
 
@@ -250,7 +250,7 @@ ContactAPI.prototype.update = function update(contact, success, failure) {
 
 ContactAPI.prototype.deleteContact = function deleteContact(contactId,
                                                             success,
-                                                            failure,) {
+                                                            failure) {
   var options = this.getOptions();
   options.path = '/dev/api/contacts/' + contactId;
   options.method = 'DELETE';
@@ -289,7 +289,7 @@ ContactAPI.prototype.deleteContact = function deleteContact(contactId,
 
 ContactAPI.prototype.updateTagsById = function update(contact,
                                                       success,
-                                                      failure,) {
+                                                      failure) {
   var options = this.getOptions();
   options.path = '/dev/api/contacts/edit/tags';
   options.method = 'PUT';
@@ -330,7 +330,7 @@ ContactAPI.prototype.updateTagsById = function update(contact,
 
 ContactAPI.prototype.deleteTagsById = function update(contact,
                                                       success,
-                                                      failure,) {
+                                                      failure) {
   var options = this.getOptions();
   options.path = '/dev/api/contacts/delete/tags';
   options.method = 'PUT';
@@ -371,7 +371,7 @@ ContactAPI.prototype.deleteTagsById = function update(contact,
 
 ContactAPI.prototype.createDeal = function createDeal(opportunity,
                                                       success,
-                                                      failure,) {
+                                                      failure) {
   var options = this.getOptions();
   options.path = '/dev/api/opportunity';
   options.method = 'POST';
@@ -412,7 +412,7 @@ ContactAPI.prototype.createDeal = function createDeal(opportunity,
 
 ContactAPI.prototype.updateDeal = function updateDeal(opportunity,
                                                       success,
-                                                      failure,) {
+                                                      failure) {
   var options = this.getOptions();
   options.path = '/dev/api/opportunity/partial-update';
   options.method = 'PUT';
@@ -453,7 +453,7 @@ ContactAPI.prototype.updateDeal = function updateDeal(opportunity,
 
 ContactAPI.prototype.getDealById = function getDealById(dealId,
                                                         success,
-                                                        failure,) {
+                                                        failure) {
   var options = this.getOptions();
   options.path = '/dev/api/opportunity/' + dealId;
 
@@ -493,7 +493,7 @@ ContactAPI.prototype.getDealById = function getDealById(dealId,
 
 ContactAPI.prototype.getDealByContactId = function getDealByContactId(contactId,
                                                                       success,
-                                                                      failure,) {
+                                                                      failure) {
   var options = this.getOptions();
   options.path = '/dev/api/contacts/' + contactId + 'deals';
 
@@ -533,7 +533,7 @@ ContactAPI.prototype.getDealByContactId = function getDealByContactId(contactId,
 
 ContactAPI.prototype.deleteDealById = function deleteDealById(dealId,
                                                               success,
-                                                              failure,) {
+                                                              failure) {
   var options = this.getOptions();
   options.path = '/dev/api/opportunity/' + dealId;
   options.method = 'DELETE';
@@ -649,7 +649,7 @@ ContactAPI.prototype.updateNote = function updateNote(note, success, failure) {
 
 ContactAPI.prototype.getNoteByContactId = function getNoteByContactId(contactId,
                                                                       success,
-                                                                      failure,) {
+                                                                      failure) {
   var options = this.getOptions();
   options.path = '/dev/api/contacts/' + contactId + '/notes';
 
@@ -688,7 +688,7 @@ ContactAPI.prototype.getNoteByContactId = function getNoteByContactId(contactId,
 ContactAPI.prototype.deleteNoteById = function deleteNoteById(contactId,
                                                               noteId,
                                                               success,
-                                                              failure,) {
+                                                              failure) {
   var options = this.getOptions();
   options.path = '/dev/api/contacts/' + contactId + '/notes/' + noteId;
   options.method = 'DELETE';
@@ -765,7 +765,7 @@ ContactAPI.prototype.createTask = function createTask(task, success, failure) {
 ContactAPI.prototype.createTaskByEmail = function createTaskByEmail(email,
                                                                     task,
                                                                     success,
-                                                                    failure,) {
+                                                                    failure) {
   var options = this.getOptions();
   options.path = '/dev/api/tasks/email/' + email;
   options.method = 'POST';
@@ -843,7 +843,7 @@ ContactAPI.prototype.updateTask = function updateTask(task, success, failure) {
 
 ContactAPI.prototype.getTaskById = function getTaskById(taskId,
                                                         success,
-                                                        failure,) {
+                                                        failure) {
   var options = this.getOptions();
   options.path = '/dev/api/tasks/' + taskId;
 
@@ -882,7 +882,7 @@ ContactAPI.prototype.getTaskById = function getTaskById(taskId,
 
 ContactAPI.prototype.deleteTaskById = function deleteTaskById(taskId,
                                                               success,
-                                                              failure,) {
+                                                              failure) {
   var options = this.getOptions();
   options.path = '/dev/api/tasks/' + taskId;
   options.method = 'DELETE';
@@ -922,7 +922,7 @@ ContactAPI.prototype.deleteTaskById = function deleteTaskById(taskId,
 ContactAPI.prototype.changeContactOwner = function update(email,
                                                           contactId,
                                                           success,
-                                                          failure,) {
+                                                          failure) {
   var qs = require('querystring');
   // Build the post string from an object
   var post_data = qs.stringify({
@@ -1006,7 +1006,7 @@ ContactAPI.prototype.getDealSource = function getDealSource(success, failure) {
 ContactAPI.prototype.getContactsByPropertyFilter = function getContactsByPropertyFilter(property,
                                                                                         value,
                                                                                         success,
-                                                                                        failure,) {
+                                                                                        failure) {
   var qs = require('querystring');
   // Build the post string from an object
   var post_data = qs.stringify({
@@ -1060,7 +1060,7 @@ ContactAPI.prototype.getContactsByPropertyFilter = function getContactsByPropert
 
 ContactAPI.prototype.getContactsByTagFilter = function getContactsByTagFilter(value,
                                                                               success,
-                                                                              failure,) {
+                                                                              failure) {
   var qs = require('querystring');
   // Build the post string from an object
   var post_data = qs.stringify({
@@ -1111,7 +1111,7 @@ ContactAPI.prototype.getContactsByTagFilter = function getContactsByTagFilter(va
 };
 
 ContactAPI.prototype.getContactCustomField = function getContactCustomField(success,
-                                                                            failure,) {
+                                                                            failure) {
   var options = this.getOptions();
   options.path = '/dev/api/custom-fields/scope/position?scope=CONTACT';
 
@@ -1147,7 +1147,7 @@ ContactAPI.prototype.getContactCustomField = function getContactCustomField(succ
 
 ContactAPI.prototype.createCustomField = function createCustomField(customJson,
                                                                     success,
-                                                                    failure,) {
+                                                                    failure) {
   var options = this.getOptions();
   options.path = '/dev/api/custom-fields';
   options.method = 'POST';
@@ -1192,7 +1192,7 @@ ContactAPI.prototype.createCustomField = function createCustomField(customJson,
 
 ContactAPI.prototype.updateCustomField = function updateCustomField(customJson,
                                                                     success,
-                                                                    failure,) {
+                                                                    failure) {
   var options = this.getOptions();
   options.path = '/dev/api/custom-fields';
   options.method = 'PUT';
@@ -1237,7 +1237,7 @@ ContactAPI.prototype.updateCustomField = function updateCustomField(customJson,
 
 ContactAPI.prototype.createEvent = function createEvent(customJson,
                                                         success,
-                                                        failure,) {
+                                                        failure) {
   var options = this.getOptions();
   options.path = '/dev/api/events';
   options.method = 'POST';
@@ -1283,7 +1283,7 @@ ContactAPI.prototype.createEvent = function createEvent(customJson,
 ContactAPI.prototype.addTagstoContacts = function addTagstoContacts(tags,
                                                                     contactIds,
                                                                     success,
-                                                                    failure,) {
+                                                                    failure) {
   var qs = require('querystring');
   // Build the post string from an object
   var post_data = qs.stringify({
@@ -1335,7 +1335,7 @@ ContactAPI.prototype.addTagstoContacts = function addTagstoContacts(tags,
 ContactAPI.prototype.deleteTagstoContacts = function deleteTagstoContacts(tags,
                                                                           contactIds,
                                                                           success,
-                                                                          failure,) {
+                                                                          failure) {
   var qs = require('querystring');
   // Build the post string from an object
   var post_data = qs.stringify({
@@ -1389,7 +1389,7 @@ ContactAPI.prototype.deleteTagstoContacts = function deleteTagstoContacts(tags,
 ContactAPI.prototype.getCompaniesByPropertyFilter = function getCompaniesByPropertyFilter(property,
                                                                                           value,
                                                                                           success,
-                                                                                          failure,) {
+                                                                                          failure) {
   var qs = require('querystring');
   // Build the post string from an object
   var post_data = qs.stringify({
